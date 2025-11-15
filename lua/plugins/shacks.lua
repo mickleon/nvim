@@ -9,5 +9,16 @@ return {
         },
       },
     },
+    indent = {
+      indent = {
+        hl = "WinSeparator",
+      },
+      scope = {
+        hl = "NonText",
+      },
+      animate = {
+        enabled = false,
+      },
+    },
   },
 }
