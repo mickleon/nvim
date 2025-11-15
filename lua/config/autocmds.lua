@@ -8,46 +8,40 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "cpp",
-  callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.expandtab = true
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
   pattern = "make",
   callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
     vim.opt_local.expandtab = false
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "json",
+  pattern = "lua",
   callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.expandtab = true
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "cs",
+  pattern = "typst",
   callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.expandtab = true
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "asm",
+  pattern = "html",
   callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
-    vim.opt_local.expandtab = true
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
   end,
 })
