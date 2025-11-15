@@ -7,6 +7,8 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+-- Tabs
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "make",
   callback = function()
@@ -15,33 +17,19 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "lua",
+  pattern = { "lua", "toml", "yaml", "typst", "html", "markdown" },
   callback = function()
     vim.opt_local.tabstop = 2
     vim.opt_local.shiftwidth = 2
   end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "typst",
-  callback = function()
-    vim.opt_local.tabstop = 2
-    vim.opt_local.shiftwidth = 2
-  end,
-})
+-- Wrap
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "html",
+  pattern = { "markdown", "text", "tex", "typst" },
   callback = function()
-    vim.opt_local.tabstop = 2
-    vim.opt_local.shiftwidth = 2
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.opt_local.tabstop = 2
-    vim.opt_local.shiftwidth = 2
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
   end,
 })
