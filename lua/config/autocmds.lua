@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua", "toml", "yaml", "typst", "html", "markdown" },
+  pattern = { "lua", "toml", "yaml", "typst", "html", "xml", "markdown" },
   callback = function()
     vim.opt_local.tabstop = 2
     vim.opt_local.shiftwidth = 2
