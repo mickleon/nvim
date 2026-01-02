@@ -11,3 +11,5 @@ vim.opt.spelllang = { "ru", "en" }
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+vim.g.vimtex_syntax_conceal_disable = 1
