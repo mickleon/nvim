@@ -9,6 +9,16 @@ return {
       djlint = {
         append_args = { "--indent", "2", "--indent-css", "2", "--indent-js", "2" },
       },
+      ["markdownlint-cli2"] = {
+        condition = function()
+          return true
+        end,
+      },
+      ["markdown-toc"] = {
+        condition = function()
+          return true
+        end,
+      },
     },
   },
 }

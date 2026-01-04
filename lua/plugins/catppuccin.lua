@@ -46,6 +46,7 @@ return {
         if (vim.g.colors_name or ""):find("catppuccin") then
           opts.highlights = require("catppuccin.special.bufferline").get_theme()
           vim.api.nvim_set_hl(0, "FloatBorder", { link = "NoiceCmdlinePopupBorder" })
+          vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
         end
       end,
     },
