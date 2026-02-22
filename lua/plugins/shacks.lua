@@ -23,5 +23,14 @@ return {
         enabled = false,
       },
     },
+    image = {
+      doc = {
+        max_width = 40,
+        max_height = 30,
+      },
+      math = {
+        enabled = false,
+      },
+    },
   },
 }
