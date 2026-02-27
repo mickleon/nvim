@@ -13,3 +13,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.g.vimtex_syntax_conceal_disable = 1
+
+vim.opt.listchars = {
+  trail = "·",
+  nbsp = "␣",
+  extends = "»",
+  precedes = "«",
+}
+
+vim.g.ai_cmp = false
