@@ -14,11 +14,9 @@ vim.opt.expandtab = true
 
 vim.g.vimtex_syntax_conceal_disable = 1
 
-vim.opt.listchars = {
-  trail = "·",
-  nbsp = "␣",
-  extends = "»",
-  precedes = "«",
-}
+vim.opt.listchars.trail = "·"
+vim.opt.listchars.nbsp = "␣"
+vim.opt.listchars.extends = "»"
+vim.opt.listchars.precedes = "«"
 
 vim.g.ai_cmp = false
