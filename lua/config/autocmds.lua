@@ -45,6 +45,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     local last_content = vim.fn.getline(last_line)
     if last_content ~= "" then
       vim.fn.append(last_line, "")
+      vim.cmd("noautocmd write")
     end
   end,
 })
