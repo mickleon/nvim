@@ -33,21 +33,3 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.linebreak = true
   end,
 })
-
--- Empty line at the end of file
-
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "*.py",
-  callback = function(ev)
-    local excluded = { "markdown", "text", "help" }
-    if vim.tbl_contains(excluded, vim.bo[ev.buf].filetype) then
-      return
-    end
-    local last_line = vim.fn.line("$")
-    local last_content = vim.fn.getline(last_line)
-    if last_content ~= "" then
-      vim.fn.append(last_line, "")
-      vim.cmd("noautocmd write")
-    end
-  end,
-})

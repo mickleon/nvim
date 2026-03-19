@@ -4,8 +4,6 @@
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.number = true
-vim.opt.relativenumber = false
 vim.opt.spelllang = { "ru", "en" }
 
 vim.opt.tabstop = 4
