@@ -6,6 +6,9 @@ return {
         explorer = {
           layout = {
             auto_hide = { "input" },
+            layout = {
+              width = 22,
+            },
           },
           hidden = true,
           ignored = true,
