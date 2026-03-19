@@ -34,6 +34,8 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Empty line at the end of file
+
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "*.py",
   callback = function(ev)
