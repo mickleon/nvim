@@ -12,11 +12,16 @@ vim.opt.expandtab = true
 
 vim.g.vimtex_syntax_conceal_disable = 1
 
-vim.opt.listchars:append({
+local listchars_current = vim.opt.listchars:get()
+local listchars_new = {
   trail = "·",
   nbsp = "␣",
   extends = "»",
   precedes = "«",
-})
+}
+for character, symbol in pairs(listchars_new) do
+  listchars_current[character] = symbol
+end
+vim.opt.listchars = listchars_current
 
 vim.g.ai_cmp = false
