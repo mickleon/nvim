@@ -2,20 +2,20 @@ return {
   "numToStr/Comment.nvim",
   opts = {
     toggler = {
-        line = 'gcc',
+      line = "gcc",
     },
     opleader = {
-        line = 'gc',
-        block = 'gb',
+      line = "gc",
+      block = "gb",
     },
     extra = {
-        above = 'gcO',
-        below = 'gco',
-        eol = 'gcA',
+      above = "gcO",
+      below = "gco",
+      eol = "gcA",
     },
     mappings = {
-        basic = true,
-        extra = true,
+      basic = true,
+      extra = true,
     },
-  }
+  },
 }
