@@ -34,6 +34,8 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Disable conceal im markdown
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "mdx", "quarto" },
   callback = function()

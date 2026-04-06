@@ -30,6 +30,7 @@ return {
       doc = {
         max_width = 40,
         max_height = 30,
+        inline = false,
       },
       math = {
         enabled = false,
