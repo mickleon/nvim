@@ -43,3 +43,13 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.concealcursor = ""
   end,
 })
+
+-- Spelling  check
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "tex", "latex", "typst", "text", "markdown" },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "ru,en"
+  end,
+})
