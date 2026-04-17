@@ -15,17 +15,6 @@ return {
         },
       },
     },
-    indent = {
-      indent = {
-        hl = "WinSeparator",
-      },
-      scope = {
-        hl = "NonText",
-      },
-      animate = {
-        enabled = false,
-      },
-    },
     image = {
       doc = {
         max_width = 40,
