@@ -25,3 +25,5 @@ end
 vim.opt.listchars = listchars_current
 
 vim.g.ai_cmp = false
+
+-- vim.g.autoformat = false
