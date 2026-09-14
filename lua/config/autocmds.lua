@@ -53,3 +53,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spelllang = "ru,en"
   end,
 })
+
+-- Code runner
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "sml",
+  callback = function(event)
+    vim.keymap.set("n", "<leader>co", function()
+      require("util.sml-repl").toggle()
+    end, { buffer = event.buf, desc = "Open SML REPL" })
+
+    vim.keymap.set("n", "<leader>cr", function()
+      require("util.sml-repl").send_use()
+    end, { buffer = event.buf, desc = "use file in REPL" })
+  end,
+})
