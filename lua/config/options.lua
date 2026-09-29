@@ -27,3 +27,5 @@ vim.opt.listchars = listchars_current
 vim.g.ai_cmp = false
 
 -- vim.g.autoformat = false
+
+vim.g.omni_sql_no_default_maps = 1
