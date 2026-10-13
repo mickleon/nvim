@@ -11,6 +11,8 @@ return {
         information = { "undercurl" },
       },
     },
+    transparent_background = true,
+    float = {},
     integrations = {
       aerial = true,
       alpha = true,
