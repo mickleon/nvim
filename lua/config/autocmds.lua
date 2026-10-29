@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua", "typst", "html", "htmldjango", "xml", "markdown" },
+  pattern = { "lua", "typst", "html", "htmldjango", "xml", "markdown", "sml", "haskell" },
   callback = function()
     vim.opt_local.tabstop = 2
     vim.opt_local.shiftwidth = 2
@@ -56,15 +56,22 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Code runner
 
+local repls = {
+  sml = { cmd = "sml", load = 'use "%s";' },
+  haskell = { cmd = "hugs", load = ":load %s" },
+}
+
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "sml",
+  pattern = vim.tbl_keys(repls),
   callback = function(event)
+    local repl = repls[event.match]
+
     vim.keymap.set("n", "<leader>co", function()
-      require("util.sml-repl").toggle()
-    end, { buffer = event.buf, desc = "Open SML REPL" })
+      require("util.cmd-run").toggle(repl.cmd)
+    end, { buffer = event.buf, desc = "Open REPL" })
 
     vim.keymap.set("n", "<leader>cr", function()
-      require("util.sml-repl").send_use()
-    end, { buffer = event.buf, desc = "use file in REPL" })
+      require("util.cmd-run").send(repl.cmd, repl.load:format(vim.fn.expand("%:t")))
+    end, { buffer = event.buf, desc = "Run code" })
   end,
 })
