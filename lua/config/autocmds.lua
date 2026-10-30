@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Wrap
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown", "text", "tex", "typst" },
+  pattern = { "markdown", "text", "tex", "typst", "sml" },
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true
